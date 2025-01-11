@@ -8,8 +8,8 @@
     <title>JS Construções</title> 
 </head>
 <body>
-    <header >
-        <nav class="flex justify-between items-center w-[92%] mx-auto">
+    <header class="header">
+        <nav class="flex justify-between items-center w-[92%] mx-auto ">
             <div>
                 <img class="w-48 md:w-52" src="/assets/logo1.jpg" alt="">
             </div>
@@ -18,7 +18,7 @@
                     <li><a class="hover:text-gray-500" href="">Inicio</a></li>
                     <li><a class="hover:text-gray-500" href="">Quem Somos</a></li>
                     <li><a class="hover:text-gray-500" href="">Serviços</a></li>
-                    <li><a class="hover:text-gray-500" href="">Portfólio</a></li>
+                    <li><a class="hover:text-gray-500" href="">Nossas Obras</a></li>
                     <li><a class="hover:text-gray-500" href="">Contato</a></li>
                 </ul>
             </div>
@@ -29,47 +29,47 @@
     </header>
     <script>
         const navLinks = document.querySelector('.nav-links')
+        const header = document.querySelector('.header')
         function onToggleMenu(e) {
             e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[16%]')
+            navLinks.classList.toggle('top-[14%]')
+            header.classList.toggle("mb-60")
         }
     </script>
     <main>
         <section id="quemsomos" class="bg-gray-200 mt-12 px-6">
             <div class="py-4">
                 <h1 class="mb-4">Quem Somos</h1>
-                <p>A JS Construções está no ramo da construção civil a mais de 20 anos. Com experiência, qualidade e confiança, entregamos soluções completas para reformas e construção civil. Atuamos em Valinhos-SP e em toda região metropolitana de Campinas-SP.</p>
+                <p class="text-justify">A JS Construções está no ramo da construção civil a mais de 20 anos. Com experiência, qualidade e confiança, entregamos soluções completas para reformas e construção civil. Atuamos em Valinhos-SP e em toda região metropolitana de Campinas-SP.</p>
                 <button>Faça uma Cotação</button>
             </div>
         </section>
-        <section id="servicos" class="bg-gray-200 mt-12 px-6">
+        <section id="servicos" class="mt-12 px-6">
             <div class="py-4">
                 <h1 class="mb-4">Nossos Serviços</h1>
-                <div>
-                    <div class="bg-green-400 h-32 mb-2">Construção</div>
-                    <div class="bg-green-400 h-32 mb-2">Reformas</div>
-                    <div class="bg-green-400 h-32 mb-2">Pisos e Acabamentos</div>
-                    <div class="bg-green-400 h-32 mb-2">Muros de Arrimo</div>
-                    <div class="bg-green-400 h-32 mb-2">Muros de Fechamento</div>
-                    <div class="bg-green-400 h-32 mb-2">Piscinas</div>
-                    <div class="bg-green-400 h-32 mb-2">Reforço Estrutural com acompanhamento de engenheiro</div>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white">Construção</div>
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white">Reformas</div>
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white"> Pisos e Acabamentos</div>
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white">Piscinas</div>
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white">Muros de Arrimo e Fechamento</div>
+                    <div class="flex justify-center items-center bg-neutral-500 hover:bg-neutral-900 h-32 border-2 border-red-200 rounded text-center cursor-pointer font-medium text-white">Reforço Estrutural com acompanhamento de engenheiro</div>
                 </div>
             </div>
         </section>
         <section id="portfolio"  class="bg-gray-200 mt-12 px-6">
             <div class="py-4">
-                <h1 class="mb-4">Portfólio</h1>
-                <div>
-                    <img class="h-48 w-full" src="/assets/reforma1.jpg" alt="">
-                    <!-- <img class="h-48 w-full" src="/assets/reforma.jpg" alt=""> -->
-                    <img class="h-48 w-full" src="/assets/reforma2.jpg" alt="">
-                    <img class="h-48 w-full" src="/assets/reform3.jpg" alt="">
-                    <img class="h-48 w-full" src="/assets/reforma4.jpg" alt="">
-                    <img class="h-48 w-full" src="/assets/escadaria.jpg" alt="">
-                    <img class="h-48 w-full" src="/assets/escadaria2.jpg" alt="">
-                    <!-- <img class="h-48 w-full" src="/assets/banheiro.jpg" alt=""> -->
-                    <img class="h-48 w-full" src="/assets/piscina.jpg" alt="">
-                    <!-- <img class="h-48 w-full" src="/assets/pisos.jpg" alt=""> -->
+                <h1 class="mb-4">Nossas Obras</h1>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/reforma1.jpg" alt="">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/reform3.jpg" alt="">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/reforma4.jpg" alt="">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/escadaria.jpg" alt="">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/escadaria2.jpg" alt="">
+                    <img class="rounded h-48 w-full md:h-52" src="/assets/piscina.jpg" alt="">
+                    <img class="rounded w-full row-span-2" src="/assets/reforma.jpg" alt="">
+                    <img class="rounded w-full row-span-2" src="/assets/banheiro.jpg" alt="">
+                    <img class="rounded w-full row-span-2" src="/assets/pisos.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -79,7 +79,7 @@
 
     </main>
     <footer>
-        <p>© 2025 JS Construções | Todos os direitos reservados</p>
+        <p>Copyright © 2025 JS Construções | Todos os direitos reservados</p>
     </footer>
     </footer>
 </body>
